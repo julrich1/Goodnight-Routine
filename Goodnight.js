@@ -3,10 +3,11 @@ const secsLen = minLen * 60;
 const perTick = 255 / secsLen;
 
 var Hue = require('philips-hue');
+const HUE_API_KEY = require('./hue_api_key.js');
 var hue = new Hue;
 
 hue.bridge = "192.168.1.212";  // from hue.getBridges
-hue.username = "nd57mE7fuKSO9ipz3nCfPkrowcc7o6yrFn9NrVwO"; // from hue.auth
+hue.username = HUE_API_KEY; // from hue.auth
 
 var timePassed = 0;
 
